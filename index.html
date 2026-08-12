@@ -12,6 +12,12 @@
     <script type="module" crossorigin src="/assets/index-sQ6SvgA6.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-Cnko5dNI.css">
     <script src="/__manus__/debug-collector.js" defer></script>
+    <style>
+      .ai-genie-video-fab { position:fixed; right:24px; bottom:24px; z-index:2147483647; display:inline-flex; align-items:center; gap:9px; padding:13px 17px; border:1px solid rgba(18,230,211,.78); border-radius:10px; color:#071c2e; background:#12e6d3; box-shadow:0 0 30px rgba(18,230,211,.34); font:700 12px/1.1 "JetBrains Mono",monospace; letter-spacing:.04em; text-decoration:none; transition:transform .16s ease,box-shadow .16s ease; }
+      .ai-genie-video-fab:hover { transform:translateY(-2px); box-shadow:0 0 42px rgba(18,230,211,.52); }
+      .ai-genie-video-fab span { display:grid; width:19px; height:19px; place-items:center; border-radius:50%; color:#12e6d3; background:#071c2e; font-size:9px; }
+      @media (max-width:640px) { .ai-genie-video-fab { right:14px; bottom:14px; padding:11px 13px; font-size:10px; } }
+    </style>
   </head>
 
   <body>
@@ -76,6 +82,7 @@ Error generating stack: `+l.message+`
 </script>
 
     <div id="root"></div>
+    <a class="ai-genie-video-fab" href="/video/" aria-label="Watch the narrated AI Genie Database explainer"><span>▶</span> Watch the narrated explainer</a>
     <script
       defer
       src="https://manus-analytics.com/umami"
