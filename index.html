@@ -25,9 +25,50 @@
       .agx-btn-video:hover { transform:translateY(-2px)!important; box-shadow:0 0 41px rgba(255,216,78,.5)!important; }
       .agx-btn-video .video-play { display:grid; place-items:center; width:20px; height:20px; border-radius:50%; color:#ffd84e; background:#092035; font-size:9px; }
     </style>
+    <style id="dbr-ecosystem-footer-overrides">
+      :root { --dbr-ink: #06111e; --dbr-panel: #081827; --dbr-line: rgba(136, 182, 206, .16); --dbr-muted: rgba(221, 235, 242, .62); --dbr-teal: #12e6d3; --dbr-gold: #ffd84e; }
+      #root footer { display: none !important; }
+      .agx-hero-shield { position: absolute; top: 18px; left: max(24px, calc(50% - 640px)); z-index: 1000; display: block; width: 30px; height: 30px; padding: 0; border: 0; background: transparent; line-height: 0; filter: drop-shadow(0 0 9px rgba(18, 230, 211, .28)); transition: transform .18s ease, filter .18s ease; }
+      .agx-hero-shield:hover, .agx-hero-shield:focus-visible { transform: translateY(-1px) scale(1.06); filter: drop-shadow(0 0 13px rgba(18, 230, 211, .62)); outline: none; }
+      .agx-hero-shield img { display: block; width: 30px; height: 30px; object-fit: contain; }
+      .agx-dbr-footer { position: relative; z-index: 2; width: 100%; margin-top: 0; overflow: hidden; border-top: 1px solid rgba(18, 230, 211, .18); color: #edf8fb; background: linear-gradient(180deg, #0a1628 0%, #060e1a 100%); }
+      .agx-dbr-footer::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 20% 5%, rgba(18, 230, 211, .08), transparent 32%), radial-gradient(circle at 90% 0%, rgba(255, 216, 78, .045), transparent 24%); }
+      .agx-dbr-footer__inner { position: relative; width: min(1440px, calc(100% - 64px)); margin: 0 auto; padding: 66px 0 28px; }
+      .agx-dbr-footer__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--dbr-line); }
+      .agx-dbr-footer__brand { display: flex; align-items: center; gap: 14px; }
+      .agx-dbr-footer__brand img { display: block; width: 42px; height: 42px; object-fit: contain; }
+      .agx-dbr-footer__brand-name { color: #f4fbff; font: 800 15px/1.1 "Syne", sans-serif; letter-spacing: .19em; text-transform: uppercase; }
+      .agx-dbr-footer__brand-name span { color: var(--dbr-teal); }
+      .agx-dbr-footer__brand-sub { margin-top: 7px; color: rgba(210, 228, 237, .46); font: 500 8px/1.2 "JetBrains Mono", monospace; letter-spacing: .24em; text-transform: uppercase; }
+      .agx-dbr-footer__quote { max-width: 390px; margin: 0; color: rgba(18, 230, 211, .83); font: italic 400 clamp(23px, 2.3vw, 39px)/1.15 "Playfair Display", serif; text-align: right; }
+      .agx-dbr-footer__nav { display: grid; grid-template-columns: minmax(230px, 1.35fr) repeat(3, minmax(160px, 1fr)); gap: 42px; padding: 42px 0 48px; }
+      .agx-dbr-footer__intro { max-width: 270px; color: var(--dbr-muted); font: 400 14px/1.75 "DM Sans", sans-serif; }
+      .agx-dbr-footer__intro strong { color: #effbff; font-weight: 600; }
+      .agx-dbr-footer__cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; padding: 11px 17px; border: 1px solid rgba(18, 230, 211, .42); border-radius: 5px; color: var(--dbr-teal); background: rgba(18, 230, 211, .025); font: 700 10px/1.1 "JetBrains Mono", monospace; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; transition: background .18s ease, border-color .18s ease, transform .18s ease; }
+      .agx-dbr-footer__cta:hover { border-color: var(--dbr-teal); background: rgba(18, 230, 211, .1); transform: translateY(-1px); }
+      .agx-dbr-footer__heading { margin-bottom: 19px; color: var(--dbr-teal); font: 700 10px/1 "JetBrains Mono", monospace; letter-spacing: .17em; text-transform: uppercase; }
+      .agx-dbr-footer__links { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+      .agx-dbr-footer__links a { color: rgba(218, 233, 240, .62); font: 400 13px/1.25 "DM Sans", sans-serif; text-decoration: none; transition: color .18s ease; }
+      .agx-dbr-footer__links a:hover { color: #fff; }
+      .agx-dbr-footer__pathways { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--dbr-line); }
+      .agx-dbr-footer__path { display: flex; align-items: center; gap: 15px; min-height: 104px; padding: 20px 26px; border-right: 1px solid var(--dbr-line); text-decoration: none; transition: background .18s ease; }
+      .agx-dbr-footer__path:last-child { border-right: 0; }
+      .agx-dbr-footer__path:hover { background: rgba(18, 230, 211, .055); }
+      .agx-dbr-footer__number { display: grid; width: 38px; height: 38px; flex: 0 0 38px; place-items: center; border: 1px solid rgba(18, 230, 211, .26); border-radius: 50%; color: var(--dbr-teal); font: 500 10px/1 "JetBrains Mono", monospace; }
+      .agx-dbr-footer__eyebrow { margin-bottom: 7px; color: rgba(200, 224, 234, .48); font: 600 8px/1 "JetBrains Mono", monospace; letter-spacing: .17em; text-transform: uppercase; }
+      .agx-dbr-footer__path-title { color: #eefbff; font: 600 17px/1.15 "Playfair Display", serif; }
+      .agx-dbr-footer__arrow { margin-left: auto; color: var(--dbr-teal); font-size: 18px; }
+      .agx-dbr-footer__meta { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 23px; color: rgba(209, 229, 237, .46); font: 400 11px/1.4 "DM Sans", sans-serif; }
+      .agx-dbr-footer__meta a { color: rgba(18, 230, 211, .72); text-decoration: none; }
+      .agx-dbr-footer__tagline { color: rgba(18, 230, 211, .72); font: 700 9px/1 "JetBrains Mono", monospace; letter-spacing: .18em; text-transform: uppercase; }
+      .agx-dbr-footer__disclaimer { margin: 14px 0 0; padding-top: 14px; border-top: 1px solid rgba(136, 182, 206, .1); color: rgba(204, 222, 230, .28); font: 400 9px/1.5 "DM Sans", sans-serif; }
+      @media (max-width: 900px) { .agx-dbr-footer__nav { grid-template-columns: repeat(2, minmax(0, 1fr)); } .agx-dbr-footer__intro { max-width: none; } .agx-dbr-footer__top { gap: 28px; } .agx-dbr-footer__quote { max-width: 310px; } }
+      @media (max-width: 640px) { .agx-hero-shield { top: 17px; left: 16px; width: 26px; height: 26px; } .agx-hero-shield img { width: 26px; height: 26px; } .agx-dbr-footer__inner { width: min(100% - 34px, 560px); padding: 46px 0 23px; } .agx-dbr-footer__top { display: block; padding-bottom: 32px; } .agx-dbr-footer__quote { margin-top: 28px; max-width: 100%; text-align: left; } .agx-dbr-footer__nav { grid-template-columns: 1fr 1fr; gap: 32px 20px; padding: 31px 0 35px; } .agx-dbr-footer__intro { grid-column: 1 / -1; } .agx-dbr-footer__pathways { grid-template-columns: 1fr; } .agx-dbr-footer__path { min-height: 83px; border-right: 0; border-bottom: 1px solid var(--dbr-line); } .agx-dbr-footer__path:last-child { border-bottom: 0; } .agx-dbr-footer__meta { display: block; } .agx-dbr-footer__tagline { margin-top: 12px; } }
+    </style>
   </head>
 
   <body>
+    <a class="agx-hero-shield" href="#top" aria-label="Back to the top of the AI Genie Database"><img src="/assets/dbr-shield-logo.svg" alt="DBR shield mark" /></a>
     <script id="manus-runtime">window.__MANUS_HOST_DEV__ = false;
 (function(){"use strict";var Mr={exports:{}},Kn={};/**
  * @license React
@@ -110,6 +151,33 @@ Error generating stack: `+l.message+`
       defer
       src="https://manus-analytics.com/umami"
       data-website-id="e839a112-0945-48ee-b496-3bee1612f77f"></script>
+    <footer class="agx-dbr-footer" id="dbr-ecosystem-footer">
+      <div class="agx-dbr-footer__inner">
+        <div class="agx-dbr-footer__top">
+          <div class="agx-dbr-footer__brand">
+            <img src="/assets/dbr-shield-logo.svg" alt="DBR shield mark" />
+            <div>
+              <div class="agx-dbr-footer__brand-name">Dreams <span>Business</span> Resources</div>
+              <div class="agx-dbr-footer__brand-sub">AI Agent Genies · Database · Automation</div>
+            </div>
+          </div>
+          <p class="agx-dbr-footer__quote">“You are in business for yourself,<br>but not by yourself.”</p>
+        </div>
+        <div class="agx-dbr-footer__nav">
+          <div class="agx-dbr-footer__intro"><strong>One relationship. Multiple solutions.</strong><br>Build the database, activate the agents, and create momentum with a connected DBR ecosystem.<br><a class="agx-dbr-footer__cta" href="https://aigenies.pro" target="_blank" rel="noopener noreferrer">Explore AI Genies ↗</a></div>
+          <div><div class="agx-dbr-footer__heading">Explore</div><ul class="agx-dbr-footer__links"><li><a href="#top">Cold Start Home ↗</a></li><li><a href="#database">Build Your Database ↗</a></li><li><a href="#flow">3-Step Flow ↗</a></li><li><a href="#dbr-ecosystem-footer">Back to Top ↑</a></li></ul></div>
+          <div><div class="agx-dbr-footer__heading">Build Momentum</div><ul class="agx-dbr-footer__links"><li><a href="https://dreamsfaststart.com/" target="_blank" rel="noopener noreferrer">DBR Fast Start ↗</a></li><li><a href="https://dreamsecosystem.com/" target="_blank" rel="noopener noreferrer">Dreams Ecosystem ↗</a></li><li><a href="https://aileveragelab.pro/" target="_blank" rel="noopener noreferrer">AI Leverage Lab ↗</a></li><li><a href="/video/">Watch the Explainer ↗</a></li></ul></div>
+          <div><div class="agx-dbr-footer__heading">DBR Ecosystem</div><ul class="agx-dbr-footer__links"><li><a href="https://renewalsforlifestyle.com/" target="_blank" rel="noopener noreferrer">Renewals for Life ↗</a></li><li><a href="https://dreamsscoreai.com/" target="_blank" rel="noopener noreferrer">DREAMS Score ↗</a></li><li><a href="https://dbrlibrary.com/" target="_blank" rel="noopener noreferrer">DBR Library ↗</a></li><li><a href="https://strategicpartners.pro/" target="_blank" rel="noopener noreferrer">Strategic Partners ↗</a></li></ul></div>
+        </div>
+        <div class="agx-dbr-footer__pathways">
+          <a class="agx-dbr-footer__path" href="https://renewalsforlifestyle.com/" target="_blank" rel="noopener noreferrer"><span class="agx-dbr-footer__number">01</span><span><span class="agx-dbr-footer__eyebrow">Renewals for Life</span><span class="agx-dbr-footer__path-title">Build recurring income</span></span><span class="agx-dbr-footer__arrow">↗</span></a>
+          <a class="agx-dbr-footer__path" href="https://dreamsfaststart.com/" target="_blank" rel="noopener noreferrer"><span class="agx-dbr-footer__number">02</span><span><span class="agx-dbr-footer__eyebrow">Dreams Fast Start</span><span class="agx-dbr-footer__path-title">Build momentum</span></span><span class="agx-dbr-footer__arrow">↗</span></a>
+          <a class="agx-dbr-footer__path" href="https://aileveragelab.pro/" target="_blank" rel="noopener noreferrer"><span class="agx-dbr-footer__number">03</span><span><span class="agx-dbr-footer__eyebrow">AI Leverage Lab</span><span class="agx-dbr-footer__path-title">Multiply productivity</span></span><span class="agx-dbr-footer__arrow">↗</span></a>
+        </div>
+        <div class="agx-dbr-footer__meta"><div>DBR © 2026 Dreams Business Resources · AI Agent Genies Platform</div><div class="agx-dbr-footer__tagline">One ecosystem. Endless opportunities.</div></div>
+        <p class="agx-dbr-footer__disclaimer">All rights reserved. This material is for educational and research purposes only—not legal, tax, investment, insurance, medical, or environmental advice. Consult qualified professionals before acting.</p>
+      </div>
+    </footer>
   </body>
 
 </html>
