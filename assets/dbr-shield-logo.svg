@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920" role="img" aria-labelledby="title desc">
+<title id="title">DBR shield mark</title><desc id="desc">A dark navy shield with a luminous teal lightning bolt.</desc>
+<defs><linearGradient id="shield" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#061f30"/><stop offset="1" stop-color="#010a14"/></linearGradient><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="24" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<path d="M960 120 1560 350v520c0 290-125 555-600 915-475-360-600-625-600-915V350L960 120Z" fill="url(#shield)" stroke="#1bd5ca" stroke-width="24" stroke-linejoin="round" filter="url(#glow)"/>
+<path d="M960 120 1560 350v520c0 290-125 555-600 915-475-360-600-625-600-915V350L960 120Z" fill="none" stroke="#91fff6" stroke-width="7" stroke-linejoin="round"/>
+<path d="m1100 300-420 705h250l-140 570 495-840h-250l65-435Z" fill="#15e5d3" stroke="#a8fff7" stroke-width="9" stroke-linejoin="round" filter="url(#glow)"/>
+</svg>
