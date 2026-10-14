@@ -11,7 +11,8 @@ A browser-based relationship workspace for Dreams Business Resources. This folde
 - Guided contact imports, previews, conservative duplicate matching, and manual review.
 - Relationship organization, reconnect drafts, conversation logging, follow-up dates, and do-not-contact preferences.
 - Excel, CSV, CRM mapping, and restorable JSON exports.
-- Ten narrated tutorial videos with captions and checklists.
+- Ten illustrated Learning Center cards with 13 independent YouTube tutorials, checklists, and official help links. iPhone, Android, and Instagram include a second video option.
+- Original narrated overviews with captions remain available as an optional section inside each guide.
 
 ## Run locally
 
@@ -30,3 +31,5 @@ The app does not sign into social accounts, scan email, scrape social networks, 
 ## Attribution
 
 Three.js and JSZip are self-hosted with their licenses in `vendor/`. Category artwork was supplied by Mike. Tutorial illustrations, the gold fallback artwork, and the animated scene were created for Gold Mine Genie.
+
+Learning Center artwork was supplied by Mike. YouTube tutorials remain on their creators’ channels and open only when a visitor chooses a link; videos are not copied or embedded. Credits and selections live in `learning-videos.js`. Tutorials were sampled and their available transcripts reviewed on October 14, 2026, rather than watched continuously in full. Export format notes explain where a tutorial’s defaults differ from Gold Mine’s supported files.
