@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rediscover the people you already know. Collect, organize and grow your warm database with Gold Mine Genie.">
+  <meta name="theme-color" content="#020b16"><title>Gold Mine Genie · Your relationships. Rediscovered.</title>
+  <link rel="icon" href="assets/gem.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="navy-theme.css">
+  <script defer src="vendor/jszip.min.js"></script><script defer src="engine.js"></script><script defer src="guides.js"></script><script defer src="app.js"></script>
+  <script type="module" src="gold-scene.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to workspace</a>
+  <aside class="sidebar">
+    <a class="brand" href="#home"><img src="assets/gem.svg" alt=""><span>GOLD MINE<span class="brand-genie">G E N I E <i>✦</i></span></span></a>
+    <div class="side-label">YOUR RELATIONSHIP WORKSPACE</div>
+    <nav id="navigation" aria-label="Main navigation"></nav>
+    <div class="side-guide"><span class="tiny-star">✦</span><h3>The gold is already there.</h3><p>One familiar name.<br>One thoughtful conversation.<br>One next meaningful action.</p><button class="text-btn" data-route="finder">Find someone you know <span>↗</span></button></div>
+    <div class="sidebar-foot"><div class="dbr-mark">D</div><span>DREAMS<small>BUSINESS RESOURCES</small></span></div>
+  </aside>
+  <div class="page-shell"><header class="topbar"><button id="mobile-menu" class="icon-button" aria-label="Open navigation">☰</button><div class="breadcrumb"><span>YOUR GOLD MINE</span><b>/</b><span id="page-label">Overview</span></div><div class="top-actions"><span class="local-badge"><i></i>Browser workspace</span><button class="small-btn" id="demo-button">Explore sample</button><button class="avatar" id="settings-button" aria-label="Workspace settings">G</button></div></header>
+    <div id="mode-banner"></div><main id="main" tabindex="-1"></main>
+    <footer class="page-footer"><span>GOLD MINE GENIE <b>✦</b> Built for real relationships.</span><button class="text-btn" data-route="settings">Privacy & my data</button></footer>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title"><button class="dialog-close icon-button" aria-label="Close dialog">×</button><div id="dialog-body"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="file-input" accept=".csv,.tsv,.vcf,.json,.ics,.xlsx,.zip" multiple hidden>
+  <input type="file" id="backup-input" accept=".json" hidden>
+</body>
+</html>
