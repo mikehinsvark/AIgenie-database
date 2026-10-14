@@ -1,4 +1,6 @@
 /* Navy, cyan and gold from Mike's Renewals For Life visual family. */
+.sidebar{overflow-y:auto;scrollbar-width:thin;scrollbar-color:#26465c transparent}.sidebar>nav{flex-shrink:0}.sidebar>.side-guide{flex-shrink:0}
+.nav-resource{color:#99cfea}.nav-resource .nav-linkedin-mark{display:inline-grid;place-items:center;flex:0 0 19px;height:19px;background:#0a78ce;color:#fff;border-radius:4px;font:700 15px/1 Arial,sans-serif;letter-spacing:-1px}.nav-resource:hover{border-color:#3d7896}
 :root{--bg:#020b16;--side:#04111f;--surface:#071726;--raised:#0a1d2f;--line:#1b354c;--text:#edf5ff;--muted:#9db4cd;--gold:#f3c96c;--mint:#28efc7;--blue:#4fe7ff;--violet:#9c7cff}
 body{background:radial-gradient(ellipse at 80% 0,#08275099,transparent 48%),radial-gradient(ellipse at 5% 70%,#06305340,transparent 45%),linear-gradient(120deg,#020b16,#031126 50%,#010914);background-attachment:fixed}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-image:radial-gradient(#60d0ff66 .55px,transparent .7px),radial-gradient(#e4c27444 .6px,transparent .8px);background-size:123px 127px,191px 163px;background-position:24px 11px,83px 60px;opacity:.35}
