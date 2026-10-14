@@ -32,3 +32,20 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;bac
 @media(max-width:760px){.learning-intro{margin:20px 0;padding:17px;gap:12px;align-items:flex-start}.learning-intro p{font-size:11px}.learning-intro strong{font-size:13px}.learning-count{display:none}.learning-grid--visual{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.lesson--visual .lesson-body{padding:16px}.lesson-heading h3{font-size:14px}.lesson-duration{font-size:9px}.lesson-actions .btn{min-height:44px}.lesson-actions .text-btn{min-height:40px}.guide-video-choice .text-btn{min-height:44px}}
 @media(max-width:560px){.learning-grid--visual{grid-template-columns:minmax(0,1fr)}.lesson--visual .lesson-body{padding:20px}.lesson-heading h3{font-size:18px}.lesson--visual .lesson-format{font-size:12px}.lesson--visual .lesson-creator{font-size:11px}.lesson-actions .btn{font-size:12px}.lesson-actions .text-btn{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.lesson--visual{transition:none}.lesson--visual:hover{transform:none}}
+
+/* Supplied artwork for the eight homepage source buttons. */
+.source-mini-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.source-mini--visual{min-width:0;min-height:154px;padding:14px 8px 12px}
+.source-mini-art{display:block;width:76px;height:76px;margin:0 auto 10px;overflow:hidden;border-radius:19px;background:#031327;pointer-events:none}
+.source-mini-art img{display:block;width:100%;height:100%;object-fit:contain;transform:scale(var(--source-art-zoom,1.6))}
+.source-mini--visual[data-source="phone"]{--source-art-zoom:1.75}
+.source-mini--visual[data-source="google"]{--source-art-zoom:1.25}
+.source-mini--visual[data-source="linkedin"]{--source-art-zoom:1.65}
+.source-mini--visual[data-source="instagram"]{--source-art-zoom:1.75}
+.source-mini--visual[data-source="tiktok"]{--source-art-zoom:1.5}
+.source-mini--visual[data-source="email"]{--source-art-zoom:1.8}
+.source-mini--visual[data-source="calendar"]{--source-art-zoom:1.45}
+.source-mini--visual b{font-size:11px;line-height:1.45}
+.source-mini--visual small{font-size:9px;line-height:1.4;margin-top:4px}
+.source-mini--visual:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(max-width:560px){.source-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.source-mini--visual{min-height:156px;padding:14px 8px}.source-mini--visual b{font-size:12px}.source-mini--visual small{font-size:10px}}
