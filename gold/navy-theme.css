@@ -35,6 +35,26 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;bac
 @media(max-width:560px){.learning-grid--visual{grid-template-columns:minmax(0,1fr)}.lesson--visual .lesson-body{padding:20px}.lesson-heading h3{font-size:18px}.lesson--visual .lesson-format{font-size:12px}.lesson--visual .lesson-creator{font-size:11px}.lesson-actions .btn{font-size:12px}.lesson-actions .text-btn{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.lesson--visual{transition:none}.lesson--visual:hover{transform:none}}
 
+/* Collect Contacts reuses the matching Learning Center covers. */
+.source-grid--visual{gap:18px;align-items:stretch}
+.source-card--visual{padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0;border-color:#284c68;box-shadow:0 10px 28px #0002;transition:border-color .2s,box-shadow .2s}
+.source-card--visual:hover{border-color:var(--source-accent);box-shadow:0 14px 32px #0004}
+.source-card--visual .number{top:12px;right:12px;z-index:1;display:grid;place-items:center;width:27px;height:27px;border:1px solid #81b7d24d;border-radius:50%;background:#041427e8;color:#c5dfef;font-size:9px;pointer-events:none}
+.source-card-art{display:block;width:100%;aspect-ratio:4/3;padding:0;background:#031529;overflow:hidden;border-bottom:1px solid #2b4d68}
+.source-card-art img{display:block;width:100%;height:100%;object-fit:contain}
+.source-card-art:focus-visible{outline:3px solid var(--gold);outline-offset:-4px}
+.source-card-body{display:flex;flex-direction:column;flex:1;padding:20px;min-width:0}
+.source-card--visual h3{font-size:16px;line-height:1.4;margin:0 0 9px}
+.source-card--visual p{font-size:12px;min-height:38px;line-height:1.7}
+.source-guide-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.source-guide-list span{font-size:9px;line-height:1.6;padding:3px 7px;border:1px solid #31506a;border-radius:5px;color:#afcce1;background:#0a233b}
+.source-card--visual .source-status{padding-top:19px;margin-top:auto;margin-bottom:16px;line-height:1.6;font-size:10px}
+.source-card--visual .btn{min-height:44px;font-size:11px;margin-top:0}
+@media(max-width:1200px){.source-grid--visual{gap:14px}.source-card-body{padding:17px}.source-card--visual h3{font-size:15px}.source-card--visual p{font-size:11px}}
+@media(max-width:760px){.source-grid--visual{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.source-card--visual{padding:0}.source-card-body{padding:17px}.source-card--visual .btn{white-space:normal}.source-card--visual .number{width:24px;height:24px;top:9px;right:9px}}
+@media(max-width:560px){.source-grid--visual{grid-template-columns:minmax(0,1fr);gap:19px}.source-card-body{padding:21px}.source-card--visual h3{font-size:18px}.source-card--visual p{font-size:13px;min-height:0}.source-guide-list span{font-size:10px}.source-card--visual .source-status{font-size:11px}.source-card--visual .btn{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.source-card--visual{transition:none}}
+
 /* Supplied artwork for the eight homepage source buttons. */
 .source-mini-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
 .source-mini--visual{min-width:0;min-height:154px;padding:14px 8px 12px}
