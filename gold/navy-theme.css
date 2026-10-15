@@ -115,3 +115,11 @@ dialog.explainer-dialog{width:min(1120px,calc(100vw - 32px));max-height:90vh;max
 .explainer-actions .btn{min-height:44px;font-size:12px}
 @media(max-width:1000px){.explainer-feature{grid-template-columns:minmax(0,1fr)}.explainer-cover img{height:auto}.explainer-copy{padding:26px}.explainer-copy h2{font-size:31px}.explainer-copy p{max-width:640px}}
 @media(max-width:560px){.explainer-feature{border-radius:14px}.explainer-copy{padding:22px}.explainer-copy h2{font-size:28px}.explainer-play{width:54px;height:54px}.explainer-duration{font-size:8px;right:10px;top:10px}.explainer-actions{align-items:stretch;flex-direction:column;gap:12px}.explainer-video{max-height:none;border-radius:8px}.explainer-dialog .dialog-header h2{font-size:23px}.explainer-actions .btn{width:100%;white-space:normal}.tour-duration{font-size:8px}}
+
+/* Make the explainer easy to find beside the gold start button. */
+.btn-video{background:linear-gradient(115deg,#54ead8,#28dec7 60%,#12bcb7);border:1px solid #83f7e5;color:#032a30;box-shadow:inset 0 1px #d8fff799,0 0 24px #28dec72b;min-height:44px;gap:10px}
+.btn-video:hover{background:linear-gradient(115deg,#88f7e8,#43ead5 60%,#20cdc6);box-shadow:0 0 30px #28dec74d;color:#032a30}
+.btn-video:focus-visible{outline:3px solid #e5fffa;outline-offset:4px}
+.btn-video svg{fill:currentColor;stroke-width:1.5}
+.btn-video .tour-duration{color:#06373a;border-color:#0a6b6866;background:#e2fff52b;font-weight:600}
+.hero .button-row .btn{min-height:44px}
