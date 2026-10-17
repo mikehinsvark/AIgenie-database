@@ -1,0 +1,112 @@
+/* A quiet color rhythm across the seven playbooks. No movement or pulsing. */
+:where(.playbook-main, .prospecting-main) {
+  --card-accent: var(--accent, #67c5ff);
+}
+
+/* Repeat the same restrained palette within each collection of cards. */
+:where(.pb-grid, .pb-split, .pb-toolkit, .pb-partner-map, .pb-wheel-strip,
+       .pb-dreams, .b2b-week, .ch-gallery, .ch-leadership-grid, .resource-grid,
+       .starter-grid, .message-timeline) > :nth-child(6n + 1) { --card-accent: #50d6c5; }
+:where(.pb-grid, .pb-split, .pb-toolkit, .pb-partner-map, .pb-wheel-strip,
+       .pb-dreams, .b2b-week, .ch-gallery, .ch-leadership-grid, .resource-grid,
+       .starter-grid, .message-timeline) > :nth-child(6n + 2) { --card-accent: #67c5ff; }
+:where(.pb-grid, .pb-split, .pb-toolkit, .pb-partner-map, .pb-wheel-strip,
+       .pb-dreams, .b2b-week, .ch-gallery, .ch-leadership-grid, .resource-grid,
+       .starter-grid, .message-timeline) > :nth-child(6n + 3) { --card-accent: #ffc76a; }
+:where(.pb-grid, .pb-split, .pb-toolkit, .pb-partner-map, .pb-wheel-strip,
+       .pb-dreams, .b2b-week, .ch-gallery, .ch-leadership-grid, .resource-grid,
+       .starter-grid, .message-timeline) > :nth-child(6n + 4) { --card-accent: #be9aff; }
+:where(.pb-grid, .pb-split, .pb-toolkit, .pb-partner-map, .pb-wheel-strip,
+       .pb-dreams, .b2b-week, .ch-gallery, .ch-leadership-grid, .resource-grid,
+       .starter-grid, .message-timeline) > :nth-child(6n + 5) { --card-accent: #ff9aba; }
+:where(.pb-grid, .pb-split, .pb-toolkit, .pb-partner-map, .pb-wheel-strip,
+       .pb-dreams, .b2b-week, .ch-gallery, .ch-leadership-grid, .resource-grid,
+       .starter-grid, .message-timeline) > :nth-child(6n + 6) { --card-accent: #78dca3; }
+
+:where(.playbook-main, .prospecting-main) :is(
+  .pb-card, .pb-highlight, .pb-resource, .pb-banner, .pb-personalize,
+  .pb-script-library, .pb-itinerary, .pb-tool, .pb-calculator, .pb-next,
+  .pb-partner-map > article, .pb-wheel-strip > div, .pb-dreams > div,
+  .b2b-week > article, .b2b-source-links, .ch-graphic-card, .ch-field-note,
+  .search-workspace, .query-card, .personalize-panel, .message-card,
+  .community-panel, .daily-plan, .resource-grid > a
+) {
+  border-color: color-mix(in srgb, var(--card-accent) 30%, #28465e);
+  border-top-color: color-mix(in srgb, var(--card-accent) 72%, #28465e);
+  background: radial-gradient(ellipse at 100% 0%, color-mix(in srgb, var(--card-accent) 11%, transparent), transparent 64%),
+              linear-gradient(145deg, #0a2235, #051525);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--card-accent) 38%, transparent), 0 8px 24px #00000012;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+/* Carry the card's color into small details while leaving body copy neutral. */
+.playbook-main .pb-card .card-icon {
+  color: var(--card-accent);
+  border-color: color-mix(in srgb, var(--card-accent) 35%, #163749);
+  background: color-mix(in srgb, var(--card-accent) 10%, #061627);
+}
+.playbook-main :is(.pb-card, .pb-highlight, .pb-resource) > .eyebrow,
+.playbook-main .pb-card > .number,
+.playbook-main .pb-resource > :is(span, b),
+.playbook-main .pb-tool > span,
+.playbook-main .pb-partner-map article > b,
+.playbook-main .b2b-week article > span,
+.playbook-main .pb-wheel-strip > div > b,
+.playbook-main .pb-dreams > div > strong,
+.prospecting-main .resource-grid > a > span { color: var(--card-accent); }
+.prospecting-main .message-card-top,
+.playbook-main .pb-script-tabs {
+  background: linear-gradient(110deg, color-mix(in srgb, var(--card-accent) 12%, #0a2034), #0a2034);
+  border-bottom-color: color-mix(in srgb, var(--card-accent) 24%, #24475e);
+}
+
+/* Only the box under the pointer glows; nested boxes do not light up a parent. */
+@media (hover: hover) and (pointer: fine) {
+  :where(.playbook-main, .prospecting-main) :is(
+    .pb-card, .pb-highlight, .pb-resource, .pb-banner, .pb-personalize,
+    .pb-script-library, .pb-itinerary, .pb-tool, .pb-calculator, .pb-next,
+    .pb-partner-map > article, .pb-wheel-strip > div, .pb-dreams > div,
+    .b2b-week > article, .b2b-source-links, .ch-graphic-card, .ch-field-note,
+    .search-workspace, .query-card, .personalize-panel, .message-card,
+    .community-panel, .daily-plan, .resource-grid > a
+  ):hover:not(:has(:is(.pb-card, .pb-highlight, .pb-itinerary, .query-card):hover)) {
+    border-color: color-mix(in srgb, var(--card-accent) 70%, #28465e);
+    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--card-accent) 70%, transparent),
+                0 0 0 1px color-mix(in srgb, var(--card-accent) 15%, transparent),
+                0 0 24px color-mix(in srgb, var(--card-accent) 16%, transparent), 0 12px 28px #00000024;
+  }
+}
+
+:where(.playbook-main, .prospecting-main) :is(
+  .pb-card, .pb-highlight, .pb-resource, .pb-banner, .pb-personalize,
+  .pb-script-library, .pb-itinerary, .pb-tool, .pb-calculator, .pb-next,
+  .pb-partner-map > article, .b2b-week > article, .b2b-source-links,
+  .ch-graphic-card, .ch-field-note, .query-card, .personalize-panel,
+  .message-card, .daily-plan, .resource-grid > a
+):focus-within {
+  border-color: color-mix(in srgb, var(--card-accent) 75%, #28465e);
+  box-shadow: inset 0 1px 0 var(--card-accent), 0 0 22px color-mix(in srgb, var(--card-accent) 16%, transparent);
+}
+:where(.playbook-main, .prospecting-main) :is(.pb-resource, .resource-grid > a):focus-visible {
+  outline: 2px solid var(--card-accent);
+  outline-offset: 4px;
+}
+
+/* Keep the existing seven navigation colors and add the same gentle feedback. */
+:where(.playbook-page, .prospecting-page) .sidebar .resource-link {
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  :where(.playbook-page, .prospecting-page) .sidebar .resource-link:hover {
+    box-shadow: inset 0 0 16px color-mix(in srgb, var(--nav-color) 8%, transparent),
+                0 0 15px color-mix(in srgb, var(--nav-color) 14%, transparent);
+  }
+}
+:where(.playbook-page, .prospecting-page) .sidebar .resource-link:focus-visible {
+  outline: 2px solid var(--nav-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 15px color-mix(in srgb, var(--nav-color) 14%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(.playbook-page, .prospecting-page) :is(main *, .sidebar .resource-link) { transition: none !important; }
+}
