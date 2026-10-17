@@ -5,10 +5,12 @@
   <meta name="description" content="Rediscover the people you already know. Collect, organize and grow your warm database with Gold Mine Genie.">
   <meta name="theme-color" content="#020b16"><title>Gold Mine Genie · Your relationships. Rediscovered.</title>
   <link rel="icon" href="assets/gem.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="navy-theme.css?v=20261015-video-button">
-  <script defer src="vendor/jszip.min.js"></script><script defer src="engine.js"></script><script defer src="guides.js"></script><script defer src="learning-videos.js"></script><script defer src="playbooks/navigation.js?v=20261015-playbooks"></script><script defer src="app.js?v=20261015-playbooks"></script>
+  <script defer src="vendor/jszip.min.js"></script><script defer src="engine.js"></script><script defer src="guides.js"></script><script defer src="learning-videos.js"></script><script defer src="playbooks/navigation.js?v=20261015-playbooks"></script><script defer src="app.js?v=20261016-home-roadmaps"></script>
   <script type="module" src="gold-scene.js"></script>
   <link rel="stylesheet" href="ecosystem-footer.css">
   <link rel="stylesheet" href="playbooks/playbooks.css?v=20261015-playbooks">
+  <link rel="stylesheet" href="home-roadmaps.css?v=20261016">
+  <script defer src="home-roadmaps.js?v=20261016"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to workspace</a>
@@ -54,6 +56,7 @@
 </footer>
   </div>
   <dialog id="dialog" aria-labelledby="dialog-title"><button class="dialog-close icon-button" aria-label="Close dialog">×</button><div id="dialog-body"></div></dialog>
+  <dialog id="home-roadmap-dialog" aria-labelledby="home-roadmap-title"><div class="home-roadmap-toolbar"><h2 id="home-roadmap-title">Gold Mine visual guide</h2><button type="button" class="small-btn" id="home-roadmap-close" aria-label="Close enlarged graphic">Close ×</button></div><img id="home-roadmap-full-image" alt="" width="1672" height="941"></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
   <input type="file" id="file-input" accept=".csv,.tsv,.vcf,.json,.ics,.xlsx,.zip" multiple hidden>
   <input type="file" id="backup-input" accept=".json" hidden>

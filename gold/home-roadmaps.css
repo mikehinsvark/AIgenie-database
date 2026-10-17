@@ -1,0 +1,81 @@
+/* Two full-width, level artwork frames above the home page footer. */
+.home-roadmaps {
+  display: grid;
+  justify-items: center;
+  gap: clamp(32px, 4vw, 56px);
+  margin-top: 52px;
+}
+.home-roadmap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  scroll-margin-top: 24px;
+}
+.home-roadmap-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #547789;
+  border-radius: 18px;
+  background: #06192c;
+  color: #c6ebf6;
+  box-shadow: 0 20px 48px #0005;
+  text-align: left;
+  cursor: zoom-in;
+}
+.home-roadmap:first-child .home-roadmap-open { border-color: #a58a4c99; }
+.home-roadmap-open:hover { border-color: #79e3df; }
+.home-roadmap-open:focus-visible { outline: 3px solid #79e3df; outline-offset: 5px; }
+.home-roadmap-open img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  object-fit: contain;
+}
+.home-roadmap-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 54px;
+  padding: 12px 20px;
+  background: linear-gradient(110deg, #0b3250, #06192b);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.home-roadmap-enlarge { color: #ffda82; white-space: nowrap; }
+.home-roadmap-enlarge b { margin-left: 9px; font-size: 20px; font-weight: 400; }
+body.home-roadmap-viewing { overflow: hidden; }
+#home-roadmap-dialog {
+  width: min(1672px, 96vw);
+  max-width: calc(100vw - 24px);
+  max-height: 94vh;
+  padding: 0;
+  border: 1px solid #547789;
+  border-radius: 16px;
+  background: #05172c;
+  color: #e8f4ff;
+}
+#home-roadmap-dialog::backdrop { background: #010a17df; backdrop-filter: blur(6px); }
+.home-roadmap-toolbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 20px;
+  background: #05172cf5;
+}
+.home-roadmap-toolbar h2 { font-size: 16px; line-height: 1.4; }
+.home-roadmap-toolbar button { min-height: 44px; flex-shrink: 0; }
+#home-roadmap-full-image { display: block; width: 100%; height: auto; }
+@media (max-width: 760px) {
+  .home-roadmaps { margin-top: 36px; gap: 28px; }
+  .home-roadmap-open { border-radius: 12px; }
+  .home-roadmap-caption { padding: 11px 13px; gap: 12px; font-size: 11px; }
+  .home-roadmap-toolbar { padding: 10px 12px; gap: 12px; }
+  .home-roadmap-toolbar h2 { font-size: 13px; }
+}
