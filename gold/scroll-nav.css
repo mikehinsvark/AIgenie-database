@@ -1,0 +1,117 @@
+/* DREAMS portfolio page navigation — scoped to the floating rail. */
+.gold-scroll-nav {
+  position: fixed;
+  z-index: 60;
+  right: max(12px, env(safe-area-inset-right));
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 54px;
+  padding: 6px;
+  border: 1px solid #00c9b830;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #03131eef, #03121aec);
+  box-shadow: 0 0 0 4px #00c9b805, 0 12px 32px #0005;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.gold-scroll-nav button {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #57ece1;
+  cursor: pointer;
+  transition: color .2s, background .2s, box-shadow .2s;
+}
+.gold-scroll-nav .scroll-arrow {
+  border: 1px solid #00c9b845;
+  background: #00c9b806;
+}
+.gold-scroll-nav .scroll-arrow svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.gold-scroll-nav button:hover:not(:disabled) {
+  color: #c1fff5;
+  background: #00c9b817;
+  box-shadow: 0 0 16px #00c9b817;
+}
+.gold-scroll-nav button:focus-visible {
+  outline: 2px solid #76fff0;
+  outline-offset: 2px;
+  background: #00c9b81d;
+}
+.gold-scroll-nav .scroll-arrow:disabled {
+  opacity: .28;
+  cursor: default;
+}
+.gold-scroll-nav .scroll-stops {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+.gold-scroll-nav .scroll-stop { height: 34px; }
+.gold-scroll-nav .scroll-stop::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00c9b84a;
+  transition: width .2s, height .2s, background .2s, box-shadow .2s;
+}
+.gold-scroll-nav .scroll-stop[aria-current="step"]::before {
+  width: 10px;
+  height: 10px;
+  background: #00deca;
+  box-shadow: 0 0 0 7px #00c9b80d, 0 0 17px #00c9b850;
+}
+.gold-scroll-nav .scroll-nav-help {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+/* Compact corner control retains both arrows and a top/bottom jump on mobile. */
+@media (max-width: 800px), (max-height: 550px) {
+  .gold-scroll-nav {
+    top: auto;
+    bottom: calc(66px + env(safe-area-inset-bottom));
+    right: max(8px, env(safe-area-inset-right));
+    transform: none;
+    width: 50px;
+    gap: 2px;
+    padding: 3px;
+  }
+  .gold-scroll-nav button { width: 42px; height: 42px; }
+  .gold-scroll-nav .scroll-stop { height: 28px; }
+  .gold-scroll-nav .scroll-stop:not(:first-child):not(:last-child) { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gold-scroll-nav button,
+  .gold-scroll-nav .scroll-stop::before { transition: none; }
+}
+
+.gold-scroll-nav[hidden] { display: none !important; }
+
+@media (min-width: 801px) {
+  body.gold-scroll-ready main { padding-right: 78px; }
+  body.gold-scroll-ready .eco-inner { padding-right: 78px; }
+}
